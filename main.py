@@ -43,7 +43,9 @@ while not is_game_over():
 
     if not guess_is_valid(guess):
         continue
-
+    if guess in guesses:
+        print("Whoops, seems like you've already entered this word, try another")
+        continue
     if guess in full_list:
         guessed += 1
         guesses.append(guess)
